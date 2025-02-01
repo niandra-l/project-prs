@@ -90,12 +90,11 @@ function playRound(humanSelection, computerSelection) {
 
 function playGame() {
     
-        for (let i=0; i<5; i++) {
         let humanChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
         
         playRound(humanChoice,computerChoice);
-    }
+    
     declareWinner();
 }
 
