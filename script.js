@@ -12,74 +12,88 @@ function getHumanChoice(){
         getHumanChoice();
 }
 
+const totalScore = document.querySelector("#totalScore");
+const resultList = document.querySelector("#resultList");
+const sum = document.createElement("h3");
+
 function getRandomInt(max){
     return Math.floor(Math.random()*max);
 }
  
-
 function getComputerChoice() {
+    const computer = document.createElement("div");
+    resultList.appendChild(computer);
+
     let computerChoice=getRandomInt(3);
       
     if (computerChoice===2) {
-        console.log("Computer choice: scissors")
+        computer.textContent = "Computer choice: scissors";
         return "scissors";
             } else if (computerChoice===1) {
-            console.log("Computer choice: paper")
+                computer.textContent = "Computer choice: paper";
             return "paper";
     } else {
-        console.log("Computer choice: rock")
+        computer.textContent = "Computer choice: rock";
         return "rock";
     }
 }
 
- 
 
 function playRound(humanSelection, computerSelection) {
-       switch(humanSelection) {
+    
+    totalScore.appendChild(sum);
+    sum.textContent = "";
+
+    let roundResult = document.createElement("li");
+    resultList.appendChild(roundResult); 
+
+    switch(humanSelection) {
         case "rock":
             if (computerSelection ==="rock") {
-                console.log("It's a tie!");
+                roundResult.textContent ="It's a tie!";
+                
             } else if (computerSelection==="paper"){
-                console.log("You lose! Paper beats rock!");
+                roundResult.textContent = "You lose! Paper beats rock!";
                 ++computerScore
             } else if (computerSelection==="scissors") {
-                console.log("You win! Rock beats scissors");
+                roundResult.textContent = "You win! Rock beats scissors";                
                 ++humanScore
             }
             break;
 
         case "paper":
             if (computerSelection ==="rock") {
-                console.log("It's a tie!");
+                roundResult.textContent = "It's a tie!";                
             } else if (computerSelection==="paper"){
-                console.log("You win! Paper beats rock!");
+                roundResult.textContent = "You win! Paper beats rock!";                
                 ++humanScore
             } else if (computerSelection==="scissors") {
-                console.log("You lose! Scissors beat paper");
+                roundResult.textContent = "You lose! Scissors beat paper";
                 ++computerScore
             }
             break;
 
-            case "scissors":
+        case "scissors":
             if (computerSelection ==="rock") {
-                console.log("You lose! Rock beats scissors");
+                roundResult.textContent = "You lose! Rock beats scissors";
                 ++computerScore
             } else if (computerSelection==="paper"){
-                console.log("You win! Scissors beat paper");
+                roundResult.textContent = "You win! Scissors beat paper";
                 ++humanScore
             } else if (computerSelection==="scissors") {
-                console.log("It's a tie!");
+                roundResult.textContent = "It's a tie!";                
             }
             break;
-
+            
     }
+    sum.textContent = "Score:" + humanScore + ":" + computerScore
     
-    console.log("Score: " + humanScore + ":" + computerScore);
 }
 
-const rockBtn = document.querySelector("#rockBtn");
+        const rockBtn = document.querySelector("#rockBtn");
         rockBtn.addEventListener("click",  () =>{
-        playRound("rock", getComputerChoice())
+        playRound("rock", getComputerChoice());
+        
         });
     
         const paperBtn = document.querySelector("#paperBtn");
@@ -89,7 +103,7 @@ const rockBtn = document.querySelector("#rockBtn");
     
         const scissorsBtn = document.querySelector("#scissorsBtn");
         scissorsBtn.addEventListener("click", () =>{
-            playRound("scissors ", getComputerChoice())
+            playRound("scissors", getComputerChoice())
             });    
 
 
