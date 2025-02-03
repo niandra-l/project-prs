@@ -78,9 +78,9 @@ function playRound(humanSelection, computerSelection) {
             break;
 
         case "paper":
-            if (computerSelection ==="rock") {
+            if (computerSelection ==="paper") {
                 roundResult.textContent = "It's a tie!";                
-            } else if (computerSelection==="paper"){
+            } else if (computerSelection==="rock"){
                 roundResult.textContent = "You win! Paper beats rock!";                
                 ++humanScore
             } else if (computerSelection==="scissors") {
