@@ -14,11 +14,14 @@ const startContainer = document.querySelector("#start-container");
 const results = document.querySelector("#results");
 const roundResult = document.querySelector("#round-result");
 const finalResult = document.querySelector("#final-result");
+const playAgainCont = document.querySelector("#play-again");
+const playAgainBtn = document.querySelector("#play-again-button");
 
 const yourScore = document.querySelector("#your-score");
 const compScore = document.querySelector("#comp-score");
 
 uiContainer.style.display = "none"; 
+playAgainCont.style.display = "none";
 
 function playGame() {
     startBtn.addEventListener("click", () => {
@@ -106,11 +109,28 @@ function playRound(humanSelection, computerSelection) {
  function declareWinner() {
     if(humanScore === 5) {
         finalResult.textContent = "Congratulations! You won the game!";
-        buttonsContainer.style.display = "none";   
+        buttonsContainer.style.display = "none";
+        playAgainCont.style.display = "initial";  
     } else if (computerScore === 5) {
         finalResult.textContent = "You lost the game! Better luck next time."
         buttonsContainer.style.display = "none";
+        playAgainCont.style.display = "initial"; 
     } 
+};
+
+playAgainBtn.addEventListener("click", playAgain); 
+
+function playAgain() {
+    humanScore=0;
+    computerScore=0;
+    computerMove.textContent = "Computer choice: ";
+    humanMove.textContent = "Your choice: ";
+    yourScore.textContent = "Your score: " + humanScore;
+    compScore.textContent = "Computer score: " + computerScore;
+    roundResult.textContent = "";
+    finalResult.textContent = "";
+    buttonsContainer.style.display = "initial";
+    playAgainCont.style.display = "none";
 };
 
 
