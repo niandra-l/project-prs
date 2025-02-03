@@ -1,46 +1,70 @@
 let humanScore=0;
 let computerScore=0;
 
+const startBtn = document.querySelector("#startBtn");
 const selectionBtn = document.querySelectorAll(".selectionBtn");
-const totalScore = document.querySelector("#totalScore");
-const resultList = document.querySelector("#resultList");
-const sum = document.createElement("h3");
+const buttonsContainer = document.querySelector(".buttons-container");
+
+const computerMove = document.querySelector("#computer-move");
+const humanMove = document.querySelector("#human-move");
+
+const uiContainer = document.querySelector("#ui-container");
+const startContainer = document.querySelector("#start-container");
+
+const results = document.querySelector("#results");
+const roundResult = document.querySelector("#round-result");
+const finalResult = document.querySelector("#final-result");
+
+const yourScore = document.querySelector("#your-score");
+const compScore = document.querySelector("#comp-score");
+
+uiContainer.style.display = "none"; 
+
+function playGame() {
+    startBtn.addEventListener("click", () => {
+        uiContainer.style.display = "initial";
+        startContainer.style.display = "none";
+    });
+};
+
+playGame();
+
+selectionBtn.forEach(button => {
+    button.addEventListener("click",  (e) => {
+    let playerChoice = e.target.id;
+    humanMove.textContent = "Your choice: " + playerChoice;
+    playRound(playerChoice, getComputerChoice());
+       
+     });
+    
+});
 
 function getRandomInt(max){
     return Math.floor(Math.random()*max);
 }
  
 function getComputerChoice() {
-    const computer = document.createElement("div");
-    resultList.appendChild(computer);
-
+    
     let computerChoice=getRandomInt(3);
       
     if (computerChoice===2) {
-        computer.textContent = "Computer choice: scissors";
+        computerMove.textContent = "Computer choice: scissors";
         return "scissors";
             } else if (computerChoice===1) {
-                computer.textContent = "Computer choice: paper";
+                computerMove.textContent = "Computer choice: paper";
             return "paper";
     } else {
-        computer.textContent = "Computer choice: rock";
+        computerMove.textContent = "Computer choice: rock";
         return "rock";
     }
 }
 
 function playRound(humanSelection, computerSelection) {
     
-    totalScore.appendChild(sum);
-    sum.textContent = "";
-
-    let roundResult = document.createElement("li");
-    resultList.appendChild(roundResult); 
-
     switch(humanSelection) {
         case "rock":
             if (computerSelection ==="rock") {
-                roundResult.textContent ="It's a tie!";
-                
+                roundResult.textContent ="It's a tie!";              
             } else if (computerSelection==="paper"){
                 roundResult.textContent = "You lose! Paper beats rock!";
                 ++computerScore
@@ -72,23 +96,23 @@ function playRound(humanSelection, computerSelection) {
             } else if (computerSelection==="scissors") {
                 roundResult.textContent = "It's a tie!";                
             }
-            break;
-            
-    }
-    sum.textContent = "Score: " + humanScore + ":" + computerScore
-    
-}
-
-        
-    selectionBtn.forEach(button => {
-        button.addEventListener("click",  (e) => {
-        let playerChoice = e.target.id;
-        playRound(playerChoice, getComputerChoice());         
-         });
-    });
+            break;            
+    };
+    yourScore.textContent = "Your score: " + humanScore;
+    compScore.textContent = "Computer score: " + computerScore;
+    declareWinner();
+}; 
 
  function declareWinner() {
-    
-    }
+    if(humanScore === 5) {
+        finalResult.textContent = "Congratulations! You won the game!";
+        buttonsContainer.style.display = "none";   
+    } else if (computerScore === 5) {
+        finalResult.textContent = "You lost the game! Better luck next time."
+        buttonsContainer.style.display = "none";
+    } 
+};
+
+
 
    
