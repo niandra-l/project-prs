@@ -1,17 +1,7 @@
 let humanScore=0;
 let computerScore=0;
 
-function getHumanChoice(){
-    let userInput=prompt("Rock, paper or scissors?").toLowerCase();
-    
-    if (userInput==="rock" ||  userInput==="paper" || userInput==="scissors") {
-        console.log("Your choice:" + userInput)
-        return userInput;
-        }
-        alert("Wrong input. Choose etiher rock, paper or scissors.");
-        getHumanChoice();
-}
-
+const selectionBtn = document.querySelectorAll(".selectionBtn");
 const totalScore = document.querySelector("#totalScore");
 const resultList = document.querySelector("#resultList");
 const sum = document.createElement("h3");
@@ -37,7 +27,6 @@ function getComputerChoice() {
         return "rock";
     }
 }
-
 
 function playRound(humanSelection, computerSelection) {
     
@@ -86,34 +75,20 @@ function playRound(humanSelection, computerSelection) {
             break;
             
     }
-    sum.textContent = "Score:" + humanScore + ":" + computerScore
+    sum.textContent = "Score: " + humanScore + ":" + computerScore
     
 }
 
-        const rockBtn = document.querySelector("#rockBtn");
-        rockBtn.addEventListener("click",  () =>{
-        playRound("rock", getComputerChoice());
         
-        });
-    
-        const paperBtn = document.querySelector("#paperBtn");
-        paperBtn.addEventListener("click", () =>{
-            playRound("paper", getComputerChoice())
-            });
-    
-        const scissorsBtn = document.querySelector("#scissorsBtn");
-        scissorsBtn.addEventListener("click", () =>{
-            playRound("scissors", getComputerChoice())
-            });    
-
+    selectionBtn.forEach(button => {
+        button.addEventListener("click",  (e) => {
+        let playerChoice = e.target.id;
+        playRound(playerChoice, getComputerChoice());         
+         });
+    });
 
  function declareWinner() {
-    if(humanScore > computerScore) {
-    console.log("You win!");
-} else if (humanScore<computerScore) {
-    console.log("Computer wins!");
-} else {
-    console.log("It's a tie!");
-}
-    console.log("You vs. computer:  " + humanScore + ":" + computerScore)
-} 
+    
+    }
+
+   
