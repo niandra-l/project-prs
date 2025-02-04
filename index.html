@@ -6,41 +6,46 @@
     <title>Project: Rock Paper Scissors</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>Rock, paper, scissors</header>
-
-    <div id="start-container">
-        <h2>Press start to play</h2>
-        <button id="startBtn">START</button>
-    </div>
-
-    <div id="ui-container">
-        <div id="results">
-            <div>
-                <div id="human-move">Your choice:</div>
-                <div id="your-score">Your score: 0</div>
+    
+    <header>Let's play rock, paper, scissors! </header>
+        <main>
+            <div id="start-container">
+                <h2>Press start to play</h2>
+                <button id="startBtn">START</button>
             </div>
 
-            <div>
-                <div id="computer-move">Computer choice:</div>
-                <div id="comp-score">Computer score: 0</div>
+            <div id="ui-container">
+                <div id="results">
+                    <div>
+                        <div id="human-move">Your choice:</div>
+                        <div id="your-score">Your score: 0</div>
+                    </div>
+
+                    <div>
+                        <div id="computer-move">Computer choice:</div>
+                        <div id="comp-score">Computer score: 0</div>
+                    </div>
+
+                    <div id="round-result"></div>
+                </div>
+
+                <div class="buttons-container">
+                    <button id="rock" class="selection-button">rock</button>
+                    <button id="paper" class="selection-button">paper</button>
+                    <button id="scissors" class="selection-button">scissors</button>
+                </div>
             </div>
 
-            <div id="round-result"></div>
+        <div id="final-result"></div>
+        <div id="play-again">Do you want to play again?
+            <button id="play-again-button">PLAY AGAIN</button>
         </div>
-
-        <div class="buttons-container">
-            <button id="rock" class="selectionBtn">rock</button>
-            <button id="paper" class="selectionBtn">paper</button>
-            <button id="scissors" class="selectionBtn">scissors</button>
-        </div>
-    </div>
-
-<div id="final-result"></div>
-<div id="play-again">Do you want to play again?
-    <button id="play-again-button">PLAY AGAIN</button>
-</div>
-<footer>Rock Paper Scissors Game by Dominika Bednarczyk </footer>
+    </main>
+    <footer>Rock Paper Scissors Game by Dominika Bednarczyk </footer>
 </body>
 </html>

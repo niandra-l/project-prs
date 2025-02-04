@@ -2,7 +2,7 @@ let humanScore=0;
 let computerScore=0;
 
 const startBtn = document.querySelector("#startBtn");
-const selectionBtn = document.querySelectorAll(".selectionBtn");
+const selectionBtn = document.querySelectorAll(".selection-button");
 const buttonsContainer = document.querySelector(".buttons-container");
 
 const computerMove = document.querySelector("#computer-move");
