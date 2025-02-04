@@ -30,7 +30,7 @@ button {
     color:white;
     text-shadow:black 4px 2px;
     font-size:42px;
-    width:3.5em;
+    width:4em;
     letter-spacing:1px;
     background-color:#fbcc3d;
     font-weight:600;
@@ -102,6 +102,25 @@ footer {
 }
 #ui-container {
     display:flex;
+    flex-direction:column;
     align-items: center;
+    justify-content: center;
     border:pink 3px solid;
+    height:80%;
+    width:50vw;
+}
+
+#results {
+    border:purple 4px solid;
+}
+.buttons-container {
+    display:flex;
+    justify-content: space-between;
+    border:black 3px solid;
+}
+
+.button-box {
+    display:flex;
+    flex-direction: column;
+
 }
