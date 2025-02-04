@@ -117,7 +117,7 @@ function playRound(humanSelection, computerSelection) {
         yourFinalScore.textContent = "Your score: " + humanScore;
         compFinalScore.textContent = "Computer score: " + computerScore;
         finalResult.textContent = "Congratulations! You won the game!";
-        finalResult.setAttribute = "color: #4c9f4f";
+        finalResult.setAttribute("style", "color: #4c9f4f");
           
     } else if (computerScore === 5) {
         uiContainer.style.display = "none";
@@ -125,7 +125,7 @@ function playRound(humanSelection, computerSelection) {
         yourFinalScore.textContent = "Your score: " + humanScore;
         compFinalScore.textContent = "Computer score: " + computerScore;
         finalResult.textContent = "You lost the game! Better luck next time.";
-        finalResult.setAttribute = "color: #f46363";
+        finalResult.setAttribute("style", "color: #f46363");
     } 
 };
 

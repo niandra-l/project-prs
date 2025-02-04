@@ -94,8 +94,6 @@ footer {
 }
 
 .ui-container {
-    
-    border:pink 3px solid;
     height:80%;
     width:50vw;
 } 
@@ -104,13 +102,12 @@ footer {
     display:flex;
     justify-content: space-between;
     align-items: baseline;
-    border:black 3px solid;
+
 }
 .score,
 .move {
     display:flex;
     justify-content:space-between;
-    border:red 3px solid;
 } 
 
 #round-result {
@@ -130,7 +127,6 @@ footer {
     display:flex;
     flex-direction: column;
     align-items: center;
-    border:yellow 3px solid;
 }
 
 img {
@@ -138,11 +134,15 @@ img {
     width:50%;
 } 
 
-.move-img {
-    height:auto;
-    width:200px;
+.move.img {
+    height:200px;
+    
 }
 
-.summary {
+.summary.div{
     padding:12px;
+}
+
+#play-again-button {
+    width:8em;
 }
