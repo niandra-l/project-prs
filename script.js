@@ -52,13 +52,13 @@ function getComputerChoice() {
     let computerChoice=getRandomInt(3);
       
     if (computerChoice===2) {
-        computerMove.textContent = "Computer choice: scissors";
+        document.getElementById("computer-image").src = "/images/scissors.png";
         return "scissors";
             } else if (computerChoice===1) {
-                computerMove.textContent = "Computer choice: paper";
+                document.getElementById("computer-image").src = "/images/paper.png";
             return "paper";
     } else {
-        computerMove.textContent = "Computer choice: rock";
+        document.getElementById("computer-image").src = "/images/rock.png";
         return "rock";
     }
 }
@@ -67,18 +67,20 @@ function playRound(humanSelection, computerSelection) {
     
     switch(humanSelection) {
         case "rock":
+            document.getElementById("human-image").src = "/images/rock.png";
             if (computerSelection ==="rock") {
                 roundResult.textContent ="It's a tie!";              
-            } else if (computerSelection==="paper"){
+            } else if (computerSelection==="paper"){           
                 roundResult.textContent = "You lose! Paper beats rock!";
                 ++computerScore
-            } else if (computerSelection==="scissors") {
+            } else if (computerSelection==="scissors") {   
                 roundResult.textContent = "You win! Rock beats scissors.";                
                 ++humanScore
             }
             break;
 
         case "paper":
+            document.getElementById("human-image").src = "/images/paper.png";
             if (computerSelection ==="paper") {
                 roundResult.textContent = "It's a tie!";                
             } else if (computerSelection==="rock"){
@@ -91,6 +93,7 @@ function playRound(humanSelection, computerSelection) {
             break;
 
         case "scissors":
+            document.getElementById("human-image").src = "/images/scissors.png";
             if (computerSelection ==="rock") {
                 roundResult.textContent = "You lose! Rock beats scissors.";
                 ++computerScore
