@@ -16,53 +16,57 @@
         <div>Let's play rock, paper, scissors! </div>
     </header>
         <main>
-            <div id="start-container">
+            <div class="start-container">
                 <h2>Press start to play</h2>
-                <button id="startBtn">START</button>
+                <button id="start-button">START</button>
             </div>
 
-            <div id="ui-container">
-                <div id="results">
+            <div class="ui-container">
+                
                     <div class="score">
                             <div id="your-score">Your score: 0</div>
                             <div id="comp-score">Computer score: 0</div>
                         
                     </div>
-                        <div id="round-result">Make the first move!</div>
                     <div class="move">
                         <div class="move-box">
                             <div id="human-move">Your choice:</div>
-                            <img id="human-image" src="/images/human-starting.png" alt="rockpng">
+                            <img id="human-image" class="move-img" src="/images/human-starting.png" alt="human-starting-png">
                         </div>
                         <div class="move-box">
                             <div id="computer-move">Computer choice:</div>
-                            <img id="computer-image" src="/images/computer-starting.png" alt="rockpng">
+                            <img id="computer-image" class="move-img" src="/images/computer-starting.png" alt="computer-starting-png">
                         </div>
                     </div>
-                </div>
-
+                     <div id="round-result">Make the first move!</div>
+                
+                
                 <div class="buttons-container">
                     <div class="button-box">
                         <img src="/images/rock.png" alt="rockpng">
                         <button id="rock" class="selection-button">ROCK</button>
     
                     </div>      
-                    <div class="button-box">
-                        <img src="/images/paper.png" alt="paperpng">
-                        <button id="paper" class="selection-button">PAPER</button>
-                    </div>
-                    <div class="button-box">
-                        <img src="/images/scissors.png" alt="scissorspng">
-                        <button id="scissors" class="selection-button">SCISSORS</button>
-                    </div>
+                        <div class="button-box">
+                            <img src="/images/paper.png" alt="paperpng">
+                            <button id="paper" class="selection-button">PAPER</button>
+                        </div>
+                        <div class="button-box">
+                            <img src="/images/scissors.png" alt="scissorspng">
+                            <button id="scissors" class="selection-button">SCISSORS</button>
+                        </div>
                 </div>
             </div>
-
-        <div id="final-result"></div>
-        <div id="play-again">Do you want to play again?
-            <button id="play-again-button">PLAY AGAIN</button>
-        </div>
-    </main>
+            <div class="summary">
+                <div id="your-final-score"></div>
+                <div id="comp-final-score"></div>
+                <div id="final-result"></div>
+                <div class="play-again">
+                    <div>Do you want to play again?</div>
+                    <button id="play-again-button">PLAY AGAIN</button>
+                </div> 
+            </div>         
+        </main>
     <footer><div>Rock Paper Scissors Game by Dominika Bednarczyk</div></footer>
 </body>
 </html>

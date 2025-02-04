@@ -1,15 +1,14 @@
 body {
     color: white;
     background-color:#5cc7ec;
-    /* background-image: linear-gradient(to bottom right, rgb(255, 162, 0), rgb(255, 234, 0));; */
     font-family:"Pixelify Sans", serif;
     font-weight:600;
     font-size:36px;
     letter-spacing:3px;
     text-shadow:black 3px 2px;
     display:flex;
-    text-align:center;
     flex-direction:column;
+    text-align:center;
     align-items:center;
     height:100vh;
     margin:0;
@@ -23,6 +22,7 @@ main {
     align-items:center;
     justify-content:center;
     width:60vw;
+    border: brown 6px solid;
 }
 
 button {
@@ -93,34 +93,56 @@ footer {
                
 }
 
+.ui-container {
+    
+    border:pink 3px solid;
+    height:80%;
+    width:50vw;
+} 
+
+.buttons-container {
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border:black 3px solid;
+}
 .score,
 .move {
     display:flex;
     justify-content:space-between;
     border:red 3px solid;
+} 
 
+#round-result {
+    padding:20px 0;
 }
-#ui-container {
+.move-box {
     display:flex;
     flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    border:pink 3px solid;
-    height:80%;
-    width:50vw;
+    align-items:center;
+    justify-content: space-between;
+    padding:24px;
+    gap:24px;
 }
 
-#results {
-    border:purple 4px solid;
-}
-.buttons-container {
-    display:flex;
-    justify-content: space-between;
-    border:black 3px solid;
-}
 
 .button-box {
     display:flex;
     flex-direction: column;
+    align-items: center;
+    border:yellow 3px solid;
+}
 
+img {
+    height:50%;
+    width:50%;
+} 
+
+.move-img {
+    height:auto;
+    width:200px;
+}
+
+.summary {
+    padding:12px;
 }
