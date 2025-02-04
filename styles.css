@@ -1,0 +1,84 @@
+body {
+    color: white;
+    background-color:#5cc7ec;
+    /* background-image: linear-gradient(to bottom right, rgb(255, 162, 0), rgb(255, 234, 0));; */
+    font-family: "Pixelify Sans", serif;
+    font-weight: 600;
+    font-size:36px;
+    text-shadow:black 4px 2px;
+    display:flex;
+    text-align:center;
+    flex-direction:column;
+    height:100vh;
+    
+}
+
+main {
+    flex:2;
+    height:80vh;
+}
+
+button {
+    font-family: "Pixelify Sans", serif;
+    color:white;
+    text-shadow:black 4px 2px;
+    font-size: 48px;
+    width:3.5em;
+    background-color:#fbcc3d;
+    font-weight:600;
+    border:none;
+    /* text-shadow: rgb(255, 51, 0) 1px 0 10px; */
+    cursor:pointer;
+    clip-path: polygon(
+    0px calc(100% - 16px),
+    4px calc(100% - 16px),
+    4px calc(100% - 8px),
+    8px calc(100% - 8px),
+    8px calc(100% - 4px),
+    16px calc(100% - 4px),
+    16px 100%,
+    calc(100% - 16px) 100%,
+    calc(100% - 16px) calc(100% - 4px),
+    calc(100% - 8px) calc(100% - 4px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 4px) calc(100% - 8px),
+    calc(100% - 4px) calc(100% - 16px),
+    100% calc(100% - 16px),
+    100% 16px,
+    calc(100% - 4px) 16px,
+    calc(100% - 4px) 8px,
+    calc(100% - 8px) 8px,
+    calc(100% - 8px) 4px,
+    calc(100% - 16px) 4px,
+    calc(100% - 16px) 0px,
+    16px 0px,
+    16px 4px,
+    8px 4px,
+    8px 8px,
+    4px 8px,
+    4px 16px,
+    0px 16px
+  );  
+
+}
+
+button:hover {
+    background-color:#f66363;
+    color:black;
+    text-shadow:white 4px 2px;
+}
+
+.selection-button {
+    width:5em;
+}
+
+header,
+footer {
+    font-size:24px;
+    border:red,5px solid;
+        
+}
+
+#ui-container {
+    
+}
