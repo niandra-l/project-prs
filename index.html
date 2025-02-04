@@ -12,7 +12,8 @@
 </head>
 <body>
     
-    <header>Let's play rock, paper, scissors! </header>
+    <header>
+        <div>Let's play rock, paper, scissors! </div></header>
         <main>
             <div id="start-container">
                 <h2>Press start to play</h2>
@@ -21,17 +22,18 @@
 
             <div id="ui-container">
                 <div id="results">
-                    <div>
-                        <div id="human-move">Your choice:</div>
+                    <div class="score">
                         <div id="your-score">Your score: 0</div>
-                    </div>
-
-                    <div>
-                        <div id="computer-move">Computer choice:</div>
                         <div id="comp-score">Computer score: 0</div>
                     </div>
-
                     <div id="round-result"></div>
+                    <div class="move">
+                        <div id="human-move">Your choice:</div>
+                        <div id="computer-move">Computer choice:</div>
+                        
+                    </div>
+
+                    
                 </div>
 
                 <div class="buttons-container">
@@ -46,6 +48,6 @@
             <button id="play-again-button">PLAY AGAIN</button>
         </div>
     </main>
-    <footer>Rock Paper Scissors Game by Dominika Bednarczyk </footer>
+    <footer><div>Rock Paper Scissors Game by Dominika Bednarczyk</div></footer>
 </body>
 </html>
