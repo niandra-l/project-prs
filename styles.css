@@ -100,9 +100,9 @@ footer {
 }
 
 .ui-container {
-    height:90%;
+    height:800px;
     width:50vw;
-    border:pink 5px solid;
+    padding:8px;
 
 } 
 
@@ -120,8 +120,8 @@ footer {
 } 
 
 #round-result {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top:24px;
+    margin-bottom:24px;
 }
 
 .move-box {
