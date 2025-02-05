@@ -38,7 +38,8 @@ button {
 
 button,
 #human-move,
-#computer-move {
+#computer-move,
+#round-result {
 
 clip-path: polygon(
     0px calc(100% - 16px),
@@ -97,6 +98,7 @@ footer {
 .ui-container {
     height:80%;
     width:50vw;
+
 } 
 
 .buttons-container {
@@ -105,6 +107,7 @@ footer {
     align-items: baseline;
 
 }
+
 .score,
 .move {
     display:flex;
@@ -115,6 +118,7 @@ footer {
     margin-top: 24px;
     margin-bottom: 24px;
 }
+
 .move-box {
     display:flex;
     flex-direction:column;
@@ -130,8 +134,9 @@ footer {
 .round-count {
     display:flex;
     align-self:center;
-    align-items: center;
-    font-size:32px;
+    align-items:center;
+    color:#3386c3;
+
 }
 
 .button-box {
@@ -151,7 +156,8 @@ img {
 
 #human-move,
 #computer-move,
-.round-count {
+.round-count,
+#round-result {
     width:11em;
     padding:2px;    
     font-size:42px;
@@ -165,6 +171,12 @@ img {
 
 #human-move {
     background-color: #4c9f4f;
+}
+
+#round-result {
+    background-color: #3386c3;
+    width:100%;
+    
 }
 
 .summary div {

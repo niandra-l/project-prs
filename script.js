@@ -1,5 +1,6 @@
 let humanScore=0;
 let computerScore=0;
+let clickCount = 0;
 
 const startBtn = document.querySelector("#start-button");
 const selectionBtn = document.querySelectorAll(".selection-button");
@@ -112,12 +113,11 @@ function playRound(humanSelection, computerSelection) {
     declareWinner();
 }; 
 
-let clickCount = 0;
 
 selectionBtn.forEach(button => {
     button.addEventListener("click", () => {
-        count++;
-        roundCount.textContent = "Round: " + count;
+        clickCount++;
+        roundCount.textContent = "Round: " + clickCount;
        
      });
     
@@ -147,13 +147,13 @@ playAgainBtn.addEventListener("click", playAgain);
 function playAgain() {
     humanScore=0;
     computerScore=0;
+    clickCount=0;
     uiContainer.style.display = "initial";
     yourScore.textContent = "Your score: " + humanScore;
     compScore.textContent = "Computer score: " + computerScore;
-    roundResult.textContent = "";
+    roundResult.textContent = "Make the first move!";
     finalResult.textContent = "";
-    summary.style.display = "none";
-    
+    summary.style.display = "none"; 
     
 };
 
