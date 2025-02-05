@@ -52,13 +52,13 @@ function getComputerChoice() {
     let computerChoice=getRandomInt(3);
       
     if (computerChoice===2) {
-        document.getElementById("computer-image").src = "/images/scissors.png";
+        document.getElementById("computer-image").src = "images/scissors.png";
         return "scissors";
             } else if (computerChoice===1) {
-                document.getElementById("computer-image").src = "/images/paper.png";
+                document.getElementById("computer-image").src = "images/paper.png";
             return "paper";
     } else {
-        document.getElementById("computer-image").src = "/images/rock.png";
+        document.getElementById("computer-image").src = "images/rock.png";
         return "rock";
     }
 }
@@ -67,7 +67,7 @@ function playRound(humanSelection, computerSelection) {
     
     switch(humanSelection) {
         case "rock":
-            document.getElementById("human-image").src = "/images/rock.png";
+            document.getElementById("human-image").src = "images/rock.png";
             if (computerSelection ==="rock") {
                 roundResult.textContent ="It's a tie!";              
             } else if (computerSelection==="paper"){           
@@ -80,7 +80,7 @@ function playRound(humanSelection, computerSelection) {
             break;
 
         case "paper":
-            document.getElementById("human-image").src = "/images/paper.png";
+            document.getElementById("human-image").src = "images/paper.png";
             if (computerSelection ==="paper") {
                 roundResult.textContent = "It's a tie!";                
             } else if (computerSelection==="rock"){
@@ -93,7 +93,7 @@ function playRound(humanSelection, computerSelection) {
             break;
 
         case "scissors":
-            document.getElementById("human-image").src = "/images/scissors.png";
+            document.getElementById("human-image").src = "images/scissors.png";
             if (computerSelection ==="rock") {
                 roundResult.textContent = "You lose! Rock beats scissors.";
                 ++computerScore
