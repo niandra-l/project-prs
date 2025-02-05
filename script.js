@@ -22,6 +22,8 @@ const compScore = document.querySelector("#comp-score");
 const yourFinalScore = document.querySelector("#your-final-score");
 const compFinalScore = document.querySelector("#comp-final-score");
 
+let roundCount = document.querySelector(".round-count");
+
 uiContainer.style.display = "none"; 
 summary.style.display = "none";
 
@@ -109,6 +111,17 @@ function playRound(humanSelection, computerSelection) {
     compScore.textContent = "Computer score: " + computerScore;
     declareWinner();
 }; 
+
+let clickCount = 0;
+
+selectionBtn.forEach(button => {
+    button.addEventListener("click", () => {
+        count++;
+        roundCount.textContent = "Round: " + count;
+       
+     });
+    
+});
 
  function declareWinner() {
     if(humanScore === 5) {
