@@ -11,8 +11,6 @@ body {
     text-align:center;
     align-items:center;
     height:100vh;
-    margin:0;
-    padding:0;
     
 }
 
@@ -22,7 +20,6 @@ main {
     align-items:center;
     justify-content:center;
     width:60vw;
-    border: brown 6px solid;
 }
 
 button {
@@ -36,7 +33,14 @@ button {
     font-weight:600;
     border:none;
     cursor:pointer;
-    clip-path: polygon(
+    
+}
+
+button,
+#human-move,
+#computer-move {
+
+clip-path: polygon(
     0px calc(100% - 16px),
     4px calc(100% - 16px),
     4px calc(100% - 8px),
@@ -66,7 +70,6 @@ button {
     4px 16px,
     0px 16px
   );  
-
 }
 
 button:hover {
@@ -83,13 +86,11 @@ header,
 footer {
     display:flex;
     justify-content: center;
+    align-items: center;
     font-size:32px;
     width:100vw;
-    height:8vh;
-    padding:6px;
-    background-color:#3386c3 ;
-    display:flex;
-    align-items:center;
+    padding:12px;
+    background-color:#3386c3;
                
 }
 
@@ -111,17 +112,27 @@ footer {
 } 
 
 #round-result {
-    padding:20px 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 .move-box {
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content: space-between;
-    padding:24px;
-    gap:24px;
+    justify-content:space-around;
+    padding:12px;
+    width:40%;
+    height:360px;
+    gap:8px;
+    
 }
 
+.round-count {
+    display:flex;
+    align-self:center;
+    align-items: center;
+    font-size:32px;
+}
 
 .button-box {
     display:flex;
@@ -134,13 +145,30 @@ img {
     width:50%;
 } 
 
-.move.img {
-    height:200px;
-    
+.move-img {
+    height:50%;
 }
 
-.summary.div{
-    padding:12px;
+#human-move,
+#computer-move,
+.round-count {
+    width:11em;
+    padding:2px;    
+    font-size:42px;
+    letter-spacing:1px;
+    font-weight:bold;
+}
+
+#computer-move{
+    background-color: #f66363;
+}
+
+#human-move {
+    background-color: #4c9f4f;
+}
+
+.summary div {
+    padding:16px;
 }
 
 #play-again-button {
