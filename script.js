@@ -152,6 +152,9 @@ function playAgain() {
     yourScore.textContent = "Your score: " + humanScore;
     compScore.textContent = "Computer score: " + computerScore;
     roundResult.textContent = "Make the first move!";
+    document.getElementById("human-image").src = "images/human-starting.png";
+    document.getElementById("computer-image").src = "images/computer-starting.png";
+    roundCount.textContent = "Round: 0";
     finalResult.textContent = "";
     summary.style.display = "none"; 
     
